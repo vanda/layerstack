@@ -37,26 +37,12 @@ const LayerStack = {
     fullScreen.innerHTML = `
       <svg role="img" viewBox="0 0 100 100"><path d="M12.346 22.572l17.619 17.612 10.219-10.22-17.612-17.618L31.925 3H3v28.925l9.346-9.353zm10.226 65.082l17.612-17.619-10.22-10.219-17.618 17.612L3 68.075V97h28.925l-9.353-9.346zm54.856-75.308L59.816 29.965l10.22 10.219 17.618-17.612L97 31.925V3H68.075l9.353 9.346zm10.226 65.082L70.035 59.816l-10.219 10.22 17.612 17.618L68.075 97H97V68.075l-9.346 9.353z"/></svg>
     `;
-    document.addEventListener('click', (e) => {
-      if (e.target.closest('.layerstack__fullscreen')) {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        } else {
-          el.requestFullscreen();
-        }
-      }
-    }, false);
 
     const drawer = el.appendChild(document.createElement('div'));
     drawer.className = 'layerstack__drawer';
     const handle = drawer.appendChild(document.createElement('div'));
     handle.className = 'layerstack__drawer__handle';
     handle.title = 'More information';
-    document.addEventListener('click', (e) => {
-      if (e.target.closest('.layerstack__drawer__handle')) {
-        drawer.classList.toggle('layerstack__drawer--open');
-      }
-    }, false);
 
     const dash = drawer.appendChild(document.createElement('div'));
     dash.className = 'layerstack__dash';
@@ -84,6 +70,20 @@ const LayerStack = {
     el.key.className = 'layerstack__key';
     el.labels = dash.appendChild(document.createElement('div'));
     el.labels.className = 'layerstack__labels';
+
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.layerstack__fullscreen')) {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          el.requestFullscreen();
+        }
+      }
+      else if (e.target.closest('.layerstack__drawer__handle')) {
+        drawer.classList.toggle('layerstack__drawer--open');
+      }
+    }, false);
+
   },
   indexItem: (el, label) => {
     el.stackHeight += 1;
@@ -137,18 +137,17 @@ const layerStacker = function(layerstackEl) {
   const m = layerstackEl.dataset.iiifManifest;
   if (m) {
     Manifesto.loadManifest(m).then((manifest) => {
-      LayerStack.init(layerstackEl);
       let mf = null;
       try {
        mf = Manifesto.create(manifest);
-      } catch(err) {
-        console.log("Invalid manifest");
-        return false;
+      } catch(e) {
+        console.error(e.name, e.message);
       }
+
+      LayerStack.init(layerstackEl);
       let i = 0;
       let vwScaler = null;
       let layers = null;
-
       /* P2 manifest, else P3 */
       if (!mf.context.includes('http://iiif.io/api/presentation/3/context.json')) {
         console.log("Note! Any specific alignment of layers should be supplied as regions in Fragment Selectors in a P3 manifest.");
@@ -213,6 +212,10 @@ const layerStacker = function(layerstackEl) {
             }
             LayerStack.indexItem(layerstackEl, layer.canvas.getLabel()[0].value);
           };
+        } else {
+          osdArgs.success = () => {
+            LayerStack.indexItem(layerstackEl, layer.canvas.getLabel()[0].value);
+          };
         }
         layerstackEl.osd.addTiledImage(osdArgs);
       });
@@ -220,7 +223,7 @@ const layerStacker = function(layerstackEl) {
       if (layerstackEl.dataset.noFade) {
         layerstackEl.nofade = true;
       }
-    });
+    }).catch(e => console.error(e.name, e.message));
   }
 };
 
