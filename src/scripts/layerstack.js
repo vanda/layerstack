@@ -145,9 +145,10 @@ const layerStacker = function(layerstackEl) {
       }
 
       LayerStack.init(layerstackEl);
-      let i = 0;
-      let vwScaler = null;
       let layers = null;
+      let layer1 = true;
+      let vwScaler = null;
+      let clipped = false;
       /* P2 manifest, else P3 */
       if (!mf.context.includes('http://iiif.io/api/presentation/3/context.json')) {
         console.log("Note! Any specific alignment of layers should be supplied as regions in Fragment Selectors in a P3 manifest.");
@@ -168,6 +169,7 @@ const layerStacker = function(layerstackEl) {
             region: item.selector.value
           };
         });
+        clipped = stack.__jsonld.behavior.includes('superimpose-regions-clipped');
       }
 
       Array.from(layers, (layer) => {
@@ -176,40 +178,44 @@ const layerStacker = function(layerstackEl) {
         let region = null;
         let viewWidth = null;
 
-        /* P2 manifest, else P3 */
-        if (!mf.context.includes('http://iiif.io/api/presentation/3/context.json')) {
-          img = layer.canvas.getImages()[0].getResource().getServices()[0].id;
-        } else {
+        if (layer.region) {
           img = layer.canvas.getContent()[0].getBody()[0].getServices()[0].id;
           region = layer.region.slice(9).split(',');
+        } else {
+          img = layer.canvas.getImages()[0].getResource().getServices()[0].id;
         }
 
         osdArgs.tileSource = `${img}/info.json`;
         if (region) {
-          i += 1;
-          if (i === 1) {
+          if (layer1) {
+            layer1 = false;
             viewWidth = 1;
             vwScaler = region[2];
           } else {
             viewWidth = vwScaler / region[2];
           }
           osdArgs.success = (data) => {
-            data.item.setWidth(viewWidth);
-            data.item.setPosition(
-              new OpenSeadragon.Point(
-                -(region[0] / 100) * data.item.getBounds().width, 
-                -(region[1]  / 100) * data.item.getBounds().height
-              )
-            );
-            if (data.item.viewer.world.getItemCount() === 1) {
-              //data.item.viewport.zoomTo(100 / region[2]);
-              data.item.viewport.panTo(
-                new OpenSeadragon.Point(
-                  (region[0] / 100) + (region[2] / 200),
-                  ((region[1] / 100) + (region[3] / 200)) 
-                  * data.item.getBounds().height / data.item.getBounds().width)
+            const tiledImg = data.item;
+            if (clipped) {
+              tiledImg.setClip(
+                tiledImg.viewportToImageRectangle(
+                  new OpenSeadragon.Rect(
+                    (region[0] / 100) * viewWidth,
+                    (region[1] / 100) * viewWidth * tiledImg.getBounds().height / tiledImg.getBounds().width,
+                    (region[2] / 100) * viewWidth,
+                    (region[3] / 100) * viewWidth * tiledImg.getBounds().height / tiledImg.getBounds().width
+                  )
+                )
               );
             }
+            tiledImg.setWidth(viewWidth);
+            tiledImg.setPosition(
+              new OpenSeadragon.Point(
+                -(region[0] / 100) * tiledImg.getBounds().width, 
+                -(region[1]  / 100) * tiledImg.getBounds().height
+              )
+            );
+            tiledImg.viewport.fitHorizontally().fitVertically();
             LayerStack.indexItem(layerstackEl, layer.canvas.getLabel()[0].value);
           };
         } else {
