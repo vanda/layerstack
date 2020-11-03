@@ -47,10 +47,6 @@
     :fullscreen & {
       height: calc(100vh - 100px);
     }
-
-    .openseadragon-canvas {
-      outline: none;
-    }
   }
 
   &__zoom-ctrls {
@@ -210,7 +206,6 @@
     color: var(--green, #50e3c2);
     cursor: pointer;
     height: 8px;
-    outline: none;
     margin: 0;
     padding: 0;
     position: relative;

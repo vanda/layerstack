@@ -13,27 +13,31 @@ const LayerStack = {
     osd.className = 'layerstack__viewer';
     el.stackHeight = 0;
     el.appendChild(osd);
-    const zoomCtrls = el.appendChild(document.createElement('div'));
-    zoomCtrls.className = 'layerstack__zoom-ctrls';
-    const zoomIn = zoomCtrls.appendChild(document.createElement('div'));
-    zoomIn.className = 'layerstack__zoom-in';
-    zoomIn.id = zoomIn.className;
-    zoomIn.title = 'Zoom in';
-    const zoomOut = zoomCtrls.appendChild(document.createElement('div'));
-    zoomOut.className = 'layerstack__zoom-out';
-    zoomOut.id = zoomOut.className;
-    zoomOut.title = 'Zoom out';
+
     el.osd = OpenSeadragon({
       id: `layerstack${LayerStack.id}`,
       showHomeControl: false,
       showFullPageControl: false,
-      zoomInButton: 'layerstack__zoom-in',
-      zoomOutButton: 'layerstack__zoom-out'
+      showZoomControl: false,
+      tabIndex: -1
     });
 
-    const fullScreen = el.appendChild(document.createElement('div'));
+    const zoomCtrls = el.appendChild(document.createElement('div'));
+    zoomCtrls.className = 'layerstack__zoom-ctrls';
+    const zoomIn = zoomCtrls.appendChild(document.createElement('a'));
+    zoomIn.className = 'layerstack__zoom-in';
+    zoomIn.id = zoomIn.className;
+    zoomIn.href = '#0';
+    zoomIn.title = 'Zoom in';
+    const zoomOut = zoomCtrls.appendChild(document.createElement('a'));
+    zoomOut.className = 'layerstack__zoom-out';
+    zoomOut.id = zoomOut.className;
+    zoomOut.href = '#0';
+    zoomOut.title = 'Zoom out';
+    const fullScreen = el.appendChild(document.createElement('a'));
     fullScreen.className = 'layerstack__fullscreen';
     fullScreen.title = 'Full screen';
+    fullScreen.href = '#0';
     fullScreen.innerHTML = `
       <svg role="img" viewBox="0 0 100 100"><path d="M12.346 22.572l17.619 17.612 10.219-10.22-17.612-17.618L31.925 3H3v28.925l9.346-9.353zm10.226 65.082l17.612-17.619-10.22-10.219-17.618 17.612L3 68.075V97h28.925l-9.353-9.346zm54.856-75.308L59.816 29.965l10.22 10.219 17.618-17.612L97 31.925V3H68.075l9.353 9.346zm10.226 65.082L70.035 59.816l-10.219 10.22 17.612 17.618L68.075 97H97V68.075l-9.346 9.353z"/></svg>
     `;
@@ -72,7 +76,13 @@ const LayerStack = {
     el.labels.className = 'layerstack__labels';
 
     document.addEventListener('click', (e) => {
-      if (e.target.closest('.layerstack__fullscreen')) {
+      if (e.target.closest('.layerstack__zoom-in')) {
+        el.osd.viewport.zoomBy(2);
+      }
+      else if (e.target.closest('.layerstack__zoom-out')) {
+        el.osd.viewport.zoomBy(.5);
+      }
+      else if (e.target.closest('.layerstack__fullscreen')) {
         if (document.fullscreenElement) {
           document.exitFullscreen();
         } else {
@@ -118,12 +128,12 @@ const LayerStack = {
       `;
     }
     el.labels.innerHTML += `
-      <div class="layerstack__label" data-layerstack-layer="${el.stackHeight}">
+      <a class="layerstack__label" data-layerstack-layer="${el.stackHeight}" href="#0">
         <div class="layerstack__key-icon" title="Layer ${el.stackHeight}">
           ${keyIcon.repeat(el.stackHeight)}
         </div>
         <div class="layerstack__label-text">${label}</div>
-      </div>
+      </a>
     `;
     document.addEventListener('click', (e) => {
       if (e.target.closest('.layerstack__key-icon, .layerstack__label')) {
