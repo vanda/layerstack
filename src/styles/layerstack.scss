@@ -33,7 +33,6 @@
   font-size: 12px;
   font-weight: 200;
   line-height: 1.43;
-  outline: 0;
 	position: relative;
 
   @include bpMinSmall {
@@ -59,13 +58,16 @@
   &__zoom-in,
   &__zoom-out,
   &__fullscreen {
+    appearance: none;
     background: var(--white, #ffffff);
+    border: none;
     border-radius: 50%;
     color: var(--black, #000000);
     cursor: pointer;
     display: block;
     height: 32px;
     margin: 24px;
+    padding: 0;
     position: relative;
     width: 32px;
     z-index: 1;
@@ -285,9 +287,13 @@
   }
 
   &__label {
+    appearance: none;
+    background: none;
+    border: none;
     cursor: pointer;
     display: flex;
     margin: 0 0 20px;
+    padding: 0;
   }
 
   &__label &__key-icon {
