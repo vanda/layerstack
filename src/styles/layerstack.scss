@@ -148,7 +148,7 @@
     }
 
     &--open &__handle {
-      transform: rotate(-180deg);
+      transform: rotate(180deg);
     }
 
     :fullscreen & {
@@ -161,11 +161,13 @@
 
 
       &__handle {
+        appearance: none;
         background: var(--grey1, #1d1e20);
         border: 1px solid var(--green, #50e3c2);
         border-radius: 50%;
-        display: block;
+        display: flex;
         height: 32px;
+        padding: 0;
         position: absolute;
         right: 24px;
         top: -16px;
@@ -180,7 +182,7 @@
           display: block;
           height: 34%;
           margin: auto;
-          transform: translate(0, 110%) rotate(225deg);
+          transform: translate(0, 2px) rotate(225deg);
           width: 34%;
         }
       }

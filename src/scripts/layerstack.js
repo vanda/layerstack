@@ -41,7 +41,7 @@ const LayerStack = {
 
     const drawer = el.appendChild(document.createElement('div'));
     drawer.className = 'layerstack__drawer';
-    const handle = drawer.appendChild(document.createElement('div'));
+    const handle = drawer.appendChild(document.createElement('button'));
     handle.className = 'layerstack__drawer__handle';
     handle.title = 'More information';
 
