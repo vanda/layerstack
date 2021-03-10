@@ -59,7 +59,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Infrared"
+          "Visible light, 2019, V&A"
         ]
       },
       "metadata": [
@@ -94,13 +94,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2020MP9634/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
                 "height": 38623,
                 "service": {
-                  "id": "https://framemark.vam.ac.uk/collections/2020MP9634", 
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP2543", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -116,7 +116,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Surface"
+          "Albumen silver print, 1860, Getty"
         ]
       },
       "metadata": [
@@ -151,75 +151,18 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2020MP9527/full/full/0/default.jpg", 
+                "@id": "https://data.getty.edu/museum/api/iiif/692788/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
                 "height": 38623,
                 "service": {
-                  "id": "https://framemark.vam.ac.uk/collections/2020MP9527", 
+                  "id": "https://data.getty.edu/museum/api/iiif/692788", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
               },
               "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
-      "type": "Canvas",
-      "label": {
-        "en": [
-          "Visible"
-        ]
-      },
-      "metadata": [
-        {"label": "Imaging technique", "value": "Visible light"}
-      ],
-      "summary": {
-        "en": [
-          ""
-        ]
-      },
-      "width": 48111,
-      "height": 38623,
-      "requiredStatement": {
-        "label": {
-          "en": [
-            ""
-          ]
-        },
-        "value": {
-          "en": [
-            ""
-          ]
-        }
-      },
-      "items": [
-        {
-          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/32",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/33",
-              "type": "Annotation",
-              "motivation": "painting",
-              "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/0/default.jpg", 
-                "type": "Image",
-                "format": "image/jpeg",
-                "width": 48111,
-                "height": 38623,
-                "service": {
-                  "id": "https://framemark.vam.ac.uk/collections/2020MP2543",
-                  "type": "ImageService2",
-                  "profile": "level1"
-                }
-              },
-              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3"
             }
           ]
         }
@@ -232,8 +175,7 @@
       "type": "Range",
       "label": { "en": [ "Superimposed regions" ] },
       "behavior": [
-        "superimpose-regions",
-        "superimpose-regions-clipped"
+        "superimpose-regions"
       ],
       "items": [
         {
@@ -241,15 +183,7 @@
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
           "selector": {
             "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
-          }
-        },
-        {
-          "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
-          "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "value": "xywh=pct:2.209,21.337,93.66,62.297"
           }
         },
         {
@@ -257,9 +191,9 @@
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
           "selector": {
             "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "value": "xywh=pct:19.121,31.867,57.383,45.265"
           }
-        }  
+        }
       ]
     }
   ]

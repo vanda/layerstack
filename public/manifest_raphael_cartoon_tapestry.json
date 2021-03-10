@@ -94,7 +94,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2020MP9634/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP9634/full/full/!0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
@@ -151,7 +151,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2020MP9527/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP9527/full/full/!0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
@@ -208,7 +208,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/!0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
@@ -220,6 +220,63 @@
                 }
               },
               "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Tapestry"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 3657,
+      "height": 4160,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/42",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/43",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://catalogo.museivaticani.va/service.php/IIIF/representation:198627:1/full/1000,/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3657,
+                "height": 4160,
+                "service": {
+                  "id": "https://catalogo.museivaticani.va/service.php/IIIF/198627",
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4"
             }
           ]
         }
@@ -241,7 +298,7 @@
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
           "selector": {
             "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "value": "xywh=pct:0,0,100,100"
           }
         },
         {
@@ -249,15 +306,15 @@
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
           "selector": {
             "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "value": "xywh=pct:0,0,100,100"
           }
         },
         {
           "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4",
           "selector": {
             "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "value": "xywh=pct:0,0,100,100"
           }
         }  
       ]
