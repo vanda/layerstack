@@ -7,7 +7,7 @@
   "type": "Manifest",
   "label": {
     "en": [
-      "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16"
+      "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16, © Victoria and Albert Museum, London. Courtesy Royal Collection Trust / Her Majesty Queen Elizabeth II, 2021"
     ]
   },
   "metadata": [
@@ -59,7 +59,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Visible light, 2019, V&A"
+          "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16, © Victoria and Albert Museum, London. Courtesy Royal Collection Trust / Her Majesty Queen Elizabeth II, 2021"
         ]
       },
       "metadata": [
@@ -167,6 +167,63 @@
           ]
         }
       ]
+    },
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Baxterotype print, 1855, © Victoria and Albert Museum, London"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 48111,
+      "height": 38623,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/32",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/33",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://framemark.vam.ac.uk/collections/2010EG8598/full/full/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 48111,
+                "height": 38623,
+                "service": {
+                  "id": "https://framemark.vam.ac.uk/collections/2010EG8598",
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3"
+            }
+          ]
+        }
+      ]
     }
   ],
   "structures": [
@@ -184,6 +241,15 @@
           "selector": {
             "type": "FragmentSelector",
             "value": "xywh=pct:2.209,21.337,93.66,62.297"
+          }
+
+        },
+        {
+          "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
+          "selector": {
+            "type": "FragmentSelector",
+            "value": "xywh=pct:9.308,23.42,82.356,57.27"
           }
         },
         {
