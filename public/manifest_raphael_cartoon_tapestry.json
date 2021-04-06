@@ -173,7 +173,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Visible"
+          "Cartoon"
         ]
       },
       "metadata": [
@@ -265,7 +265,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://catalogo.museivaticani.va/service.php/IIIF/representation:198627:1/full/1000,/0/default.jpg", 
+                "@id": "https://catalogo.museivaticani.va/service.php/IIIF/representation:198627:1/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 3657,
@@ -289,32 +289,24 @@
       "type": "Range",
       "label": { "en": [ "Superimposed regions" ] },
       "behavior": [
-        "superimpose-regions",
-        "superimpose-regions-clipped"
+        "superimpose-regions"
       ],
       "items": [
         {
           "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
-          "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:0,0,100,100"
-          }
-        },
-        {
-          "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:0,0,100,100"
+            "type": "ImageApiSelector",
+            "region": "pct:1.392,1.578,97.608,96.19",
+            "rotation" : "!359.5"
           }
         },
         {
           "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:0,0,100,100"
+            "type": "ImageApiSelector",
+            "region": "pct:8.655,8.666,84.298,58.721"
           }
         }  
       ]

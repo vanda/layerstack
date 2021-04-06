@@ -59,7 +59,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16, © Victoria and Albert Museum, London. Courtesy Royal Collection Trust / Her Majesty Queen Elizabeth II, 2021"
+          "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16, © V&A. Courtesy Royal Collection Trust 2021"
         ]
       },
       "metadata": [
@@ -116,7 +116,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Albumen silver print, 1860, Getty"
+          "Albumen silver print, 1860, Getty Museum"
         ]
       },
       "metadata": [
@@ -173,7 +173,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Baxterotype print, 1855, © Victoria and Albert Museum, London"
+          "Baxterotype print, 1855, © V&A"
         ]
       },
       "metadata": [
@@ -237,27 +237,26 @@
       "items": [
         {
           "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:2.209,21.337,93.66,62.297"
+            "type": "ImageApiSelector",
+            "region": "pct:9.308,23.42,82.356,57.27"
           }
-
         },
         {
           "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:9.308,23.42,82.356,57.27"
+            "type": "ImageApiSelector",
+            "region": "pct:2.209,21.337,93.66,62.297"
           }
         },
         {
           "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:19.121,31.867,57.383,45.265"
+            "type": "ImageApiSelector",
+            "region": "pct:19.121,31.867,57.383,45.265"
           }
         }
       ]

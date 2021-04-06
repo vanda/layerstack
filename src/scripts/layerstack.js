@@ -158,7 +158,7 @@ const layerStacker = function(layerstackEl) {
       let clipped = false;
       /* P2 manifest, else P3 */
       if (!mf.context.includes('http://iiif.io/api/presentation/3/context.json')) {
-        console.log("Note! Any specific alignment of layers should be supplied as regions in Fragment Selectors in a P3 manifest.");
+        console.log("Note! Any image alignment paramaters should be supplied for each layer as an ImageApiSelector in a P3 manifest.");
         layers = Array.from(mf.getSequences()[0].getCanvases(), (item) => {
           return { canvas: item };
         });
@@ -167,13 +167,14 @@ const layerStacker = function(layerstackEl) {
           return range.__jsonld.behavior.includes('superimpose-regions');
         });
         if (!stack) {
-          alert("Please provide alignment regions as Fragment Selectors in a P3 manifest.");
+          alert("Please provide alignment regions as ImageApiSelector in a P3 manifest.");
           return false;
         }
         layers = Array.from(stack.__jsonld.items, (item) => {
           return {
             canvas: mf.getSequences()[0].getCanvasById(item.source),
-            region: item.selector.value
+            region: item.selector.region.slice(4).split(','),
+            rotation: item.selector.rotation || 0
           };
         });
         clipped = stack.__jsonld.behavior.includes('superimpose-regions-clipped');
@@ -182,24 +183,22 @@ const layerStacker = function(layerstackEl) {
       Array.from(layers, (layer) => {
         const osdArgs = {};
         let img = null;
-        let region = null;
         let viewWidth = null;
 
         if (layer.region) {
           img = layer.canvas.getContent()[0].getBody()[0].getServices()[0].id;
-          region = layer.region.slice(9).split(',');
         } else {
           img = layer.canvas.getImages()[0].getResource().getServices()[0].id;
         }
 
         osdArgs.tileSource = `${img}/info.json`;
-        if (region) {
+        if (layer.region) {
           if (layer1) {
             layer1 = false;
             viewWidth = 1;
-            vwScaler = region[2];
+            vwScaler = layer.region[2];
           } else {
-            viewWidth = vwScaler / region[2];
+            viewWidth = vwScaler / layer.region[2];
           }
           osdArgs.success = (data) => {
             const tiledImg = data.item;
@@ -207,10 +206,10 @@ const layerStacker = function(layerstackEl) {
               tiledImg.setClip(
                 tiledImg.viewportToImageRectangle(
                   new OpenSeadragon.Rect(
-                    (region[0] / 100) * viewWidth,
-                    (region[1] / 100) * viewWidth * tiledImg.getBounds().height / tiledImg.getBounds().width,
-                    (region[2] / 100) * viewWidth,
-                    (region[3] / 100) * viewWidth * tiledImg.getBounds().height / tiledImg.getBounds().width
+                    (layer.region[0] / 100) * viewWidth,
+                    (layer.region[1] / 100) * viewWidth * tiledImg.getBounds().height / tiledImg.getBounds().width,
+                    (layer.region[2] / 100) * viewWidth,
+                    (layer.region[3] / 100) * viewWidth * tiledImg.getBounds().height / tiledImg.getBounds().width
                   )
                 )
               );
@@ -218,10 +217,15 @@ const layerStacker = function(layerstackEl) {
             tiledImg.setWidth(viewWidth);
             tiledImg.setPosition(
               new OpenSeadragon.Point(
-                -(region[0] / 100) * tiledImg.getBounds().width, 
-                -(region[1]  / 100) * tiledImg.getBounds().height
+                -(layer.region[0] / 100) * tiledImg.getBounds().width, 
+                -(layer.region[1]  / 100) * tiledImg.getBounds().height
               )
             );
+            if(layer.rotation[0] === '!') {
+              tiledImg.setFlip(true);
+              layer.rotation = layer.rotation.slice(1);
+            }
+            tiledImg.setRotation(layer.rotation, true);
             tiledImg.viewport.fitHorizontally().fitVertically();
             LayerStack.indexItem(layerstackEl, layer.canvas.getLabel()[0].value);
           };
