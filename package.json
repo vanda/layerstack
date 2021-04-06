@@ -58,6 +58,6 @@
     "core-js": "^3.6.5",
     "element-closest-polyfill": "^1.0.2",
     "fullscreen-polyfill": "^1.0.3",
-    "openseadragon": "^2.4.2"
+    "openseadragon": "https://github.com/openseadragon/openseadragon#63f8f2e2a94f0"
   }
 }
