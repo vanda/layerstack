@@ -7,7 +7,7 @@
   "type": "Manifest",
   "label": {
     "en": [
-      "LayerStack demo"
+      "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16"
     ]
   },
   "metadata": [
@@ -59,16 +59,19 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Pencil drawing of Hadleigh Castle from a sketch book. © Victoria and Albert Museum, London"
+          "Infrared"
         ]
       },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Infrared"}
+      ],
       "summary": {
         "en": [
           ""
         ]
       },
-      "width": 2500,
-      "height": 1875,
+      "width": 48111,
+      "height": 38623,
       "requiredStatement": {
         "label": {
           "en": [
@@ -91,13 +94,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark.vam.ac.uk/collections/2013GC0441/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP9634/full/full/!0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 2500,
-                "height": 1875,
+                "width": 48111,
+                "height": 38623,
                 "service": {
-                  "id": "https://framemark.vam.ac.uk/collections/2013GC0441",
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP9634", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -113,16 +116,19 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Sketch of Hadleigh Castle, 1828–29, oil on millboard. Yale Center for British Art, Paul Mellon Collection"
+          "Surface"
         ]
       },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Surface scan"}
+      ],
       "summary": {
         "en": [
           ""
         ]
       },
-      "width": 5218,
-      "height": 4486,
+      "width": 48111,
+      "height": 38623,
       "requiredStatement": {
         "label": {
           "en": [
@@ -145,13 +151,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://images.collections.yale.edu/iiif/2/ycba:a866e10e-5a6f-4b87-b4ec-6f0488940796/full/full/0/native",
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP9527/full/full/!0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 5218,
-                "height": 4486,
+                "width": 48111,
+                "height": 38623,
                 "service": {
-                  "id": "https://images.collections.yale.edu/iiif/2/ycba:a866e10e-5a6f-4b87-b4ec-6f0488940796",
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP9527", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -167,16 +173,19 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Hadleigh Castle, The Mouth of the Thames—Morning after a Stormy Night, 1829, Oil on canvas. Yale Center for British Art, Paul Mellon Collection"
+          "Cartoon"
         ]
       },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
       "summary": {
         "en": [
           ""
         ]
       },
-      "width": 7125,
-      "height": 5263,
+      "width": 48111,
+      "height": 38623,
       "requiredStatement": {
         "label": {
           "en": [
@@ -199,18 +208,75 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://images.collections.yale.edu/iiif/2/ycba:6e961789-58ac-49de-a51e-5c7f268c7f5f/full/full/0/native",
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/!0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 7125,
-                "height": 5263,
+                "width": 48111,
+                "height": 38623,
                 "service": {
-                  "id": "https://images.collections.yale.edu/iiif/2/ycba:6e961789-58ac-49de-a51e-5c7f268c7f5f",
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP2543",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
               },
               "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Tapestry"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 3657,
+      "height": 4160,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/42",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/43",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://catalogo.museivaticani.va/service.php/IIIF/representation:198627:1/full/full/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3657,
+                "height": 4160,
+                "service": {
+                  "id": "https://catalogo.museivaticani.va/service.php/IIIF/198627",
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4"
             }
           ]
         }
@@ -228,26 +294,19 @@
       "items": [
         {
           "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
-          "selector": {
-            "type": "ImageApiSelector",
-            "region": "pct:13.287,0.266,75.425,84.288"
-          }
-        },
-        {
-          "type": "SpecificResource",
-          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
-          "selector": {
-            "type": "ImageApiSelector",
-            "region": "pct:2.099,1.954,97.169,94.619"
-          }
-        },
-        {
-          "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
           "selector": {
             "type": "ImageApiSelector",
-            "region": "pct:0.697,11.753,75.425,85.541"
+            "region": "pct:1.392,1.578,97.608,96.19",
+            "rotation" : "!359.5"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/4",
+          "selector": {
+            "type": "ImageApiSelector",
+            "region": "pct:8.655,8.666,84.298,58.721"
           }
         }  
       ]

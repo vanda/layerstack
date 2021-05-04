@@ -94,13 +94,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://vam-etc-images.azureedge.net/collections/2020MP9634/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP9634/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
                 "height": 38623,
                 "service": {
-                  "id": "https://vam-etc-images.azureedge.net/collections/2020MP9634", 
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP9634", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -151,13 +151,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://vam-etc-images.azureedge.net/collections/2020MP9527/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP9527/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
                 "height": 38623,
                 "service": {
-                  "id": "https://vam-etc-images.azureedge.net/collections/2020MP9527", 
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP9527", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -208,13 +208,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://vam-etc-images.azureedge.net/collections/2020MP2543/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
                 "width": 48111,
                 "height": 38623,
                 "service": {
-                  "id": "https://vam-etc-images.azureedge.net/collections/2020MP2543",
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP2543",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -240,24 +240,24 @@
           "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "type": "ImageApiSelector",
+            "region": "pct:95,95,5,5"
           }
         },
         {
           "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "type": "ImageApiSelector",
+            "region": "pct:95,95,5,5"
           }
         },
         {
           "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
           "selector": {
-            "type": "FragmentSelector",
-            "value": "xywh=pct:95,95,5,5"
+            "type": "ImageApiSelector",
+            "region": "pct:95,95,5,5"
           }
         }  
       ]

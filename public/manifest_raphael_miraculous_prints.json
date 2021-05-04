@@ -7,7 +7,7 @@
   "type": "Manifest",
   "label": {
     "en": [
-      "LayerStack demo"
+      "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16, © Victoria and Albert Museum, London. Courtesy Royal Collection Trust / Her Majesty Queen Elizabeth II, 2021"
     ]
   },
   "metadata": [
@@ -59,16 +59,19 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Christ's Charge to Peter, engraving on paper, before 1575, Diana Scultori, Museum no. 12414. © Victoria and Albert Museum, London"
+          "The Miraculous Draught of Fishes, by Raphael, about 1515 – 16, © V&A. Courtesy Royal Collection Trust 2021"
         ]
       },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Infrared"}
+      ],
       "summary": {
         "en": [
           ""
         ]
       },
-      "width": 5596,
-      "height": 3531,
+      "width": 48111,
+      "height": 38623,
       "requiredStatement": {
         "label": {
           "en": [
@@ -91,13 +94,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/collections/2006BE0703/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2543/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 5596,
-                "height": 3531,
+                "width": 48111,
+                "height": 38623,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/collections/2006BE0703",
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP2543", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -113,16 +116,19 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "Christ's Charge to Peter (Matthew 16: 18-19, John 21: 15-17), cartoon for a tapestry, On loan from the collection of Her Majesty the Queen"
+          "Albumen silver print, 1860, Getty Museum"
         ]
       },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Surface scan"}
+      ],
       "summary": {
         "en": [
           ""
         ]
       },
-      "width": 5563,
-      "height": 3543,
+      "width": 48111,
+      "height": 38623,
       "requiredStatement": {
         "label": {
           "en": [
@@ -145,18 +151,75 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/collections/2006AT7784/full/full/0/default",
+                "@id": "https://data.getty.edu/museum/api/iiif/692788/full/full/0/default.jpg", 
                 "type": "Image",
                 "format": "image/jpeg",
-                "width": 5563,
-                "height": 3543,
+                "width": 48111,
+                "height": 38623,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/collections/2006AT7784",
+                  "id": "https://data.getty.edu/museum/api/iiif/692788", 
                   "type": "ImageService2",
                   "profile": "level1"
                 }
               },
               "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Baxterotype print, 1855, © V&A"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 48111,
+      "height": 38623,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/32",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/33",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://framemark.vam.ac.uk/collections/2010EG8598/full/full/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 48111,
+                "height": 38623,
+                "service": {
+                  "id": "https://framemark.vam.ac.uk/collections/2010EG8598",
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3"
             }
           ]
         }
@@ -174,10 +237,18 @@
       "items": [
         {
           "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/3",
+          "selector": {
+            "type": "ImageApiSelector",
+            "region": "pct:9.308,23.42,82.356,57.27"
+          }
+        },
+        {
+          "type": "SpecificResource",
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
           "selector": {
             "type": "ImageApiSelector",
-            "region": "pct:0.005,0.034,99.013,98.621"
+            "region": "pct:2.209,21.337,93.66,62.297"
           }
         },
         {
@@ -185,7 +256,7 @@
           "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
           "selector": {
             "type": "ImageApiSelector",
-            "region": "pct:2.794,8.258,92.194,90.968"
+            "region": "pct:19.121,31.867,57.383,45.265"
           }
         }
       ]
