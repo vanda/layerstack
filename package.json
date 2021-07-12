@@ -1,6 +1,6 @@
 {
   "name": "layerstack",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A viewer for superimposed, aligned IIIF images.",
   "keywords": [
     "v&a",
