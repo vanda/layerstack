@@ -23,14 +23,14 @@
               "@type": "oa:Annotation", 
               "motivation": "sc:painting", 
               "resource": {
-                "@id": "https://vam-etc-images.azureedge.net/collections/2020MR0100/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MR0100/full/full/0/default.jpg", 
                 "@type": "dctypes:Image", 
                 "format": "image/jpeg", 
                 "height": 41146, 
                 "width": 53370, 
                 "service": {
                   "@context": "http://iiif.io/api/image/2/context.json", 
-                  "@id": "https://vam-etc-images.azureedge.net/collections/2020MR0100", 
+                  "@id": "https://framemark.vam.ac.uk/collections/2020MR0100", 
                   "profile": "http://iiif.io/api/image/2/level2.json"
                 }
               }, 
@@ -52,14 +52,14 @@
               "@type": "oa:Annotation", 
               "motivation": "sc:painting", 
               "resource": {
-                "@id": "https://vam-etc-images.azureedge.net/collections/2020MP2549/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2549/full/full/0/default.jpg", 
                 "@type": "dctypes:Image", 
                 "format": "image/jpeg", 
                 "height": 41146, 
                 "width": 53370, 
                 "service": {
                   "@context": "http://iiif.io/api/image/2/context.json", 
-                  "@id": "https://vam-etc-images.azureedge.net/collections/2020MP2549", 
+                  "@id": "https://framemark.vam.ac.uk/collections/2020MP2549", 
                   "profile": "http://iiif.io/api/image/2/level2.json"
                 }
               }, 
@@ -81,14 +81,14 @@
               "@type": "oa:Annotation", 
               "motivation": "sc:painting", 
               "resource": {
-                "@id": "https://vam-etc-images.azureedge.net/collections/2020MR0101/full/full/0/default.jpg", 
+                "@id": "https://framemark.vam.ac.uk/collections/2020MR0101/full/full/0/default.jpg", 
                 "@type": "dctypes:Image", 
                 "format": "image/jpeg", 
                 "height": 41146, 
                 "width": 53370, 
                 "service": {
                   "@context": "http://iiif.io/api/image/2/context.json", 
-                  "@id": "https://vam-etc-images.azureedge.net/collections/2020MR0101", 
+                  "@id": "https://framemark.vam.ac.uk/collections/2020MR0101", 
                   "profile": "http://iiif.io/api/image/2/level2.json"
                 }
               }, 

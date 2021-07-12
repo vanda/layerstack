@@ -60,7 +60,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "canvas 1"
+          "Version 1"
         ]
       },
       "summary": {
@@ -92,13 +92,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/demos/2017KC2295/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2017KC2295/full/full/0/default",
                 "type": "Image",
                 "format": "img/jpeg",
                 "width": 6000,
                 "height": 8000,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/demos/2017KC2295",
+                  "id": "https://framemark.vam.ac.uk/collections/2017KC2295",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -114,7 +114,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "canvas 2"
+          "Version 2"
         ]
       },
       "summary": {
@@ -146,13 +146,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/demos/2017KC2294/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2017KC2294/full/full/0/default",
                 "type": "Image",
                 "format": "img/jpeg",
                 "width": 6000,
                 "height": 8000,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/demos/2017KC2294",
+                  "id": "https://framemark.vam.ac.uk/collections/2017KC2294",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -168,7 +168,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "canvas 3"
+          "Version 3"
         ]
       },
       "summary": {
@@ -200,13 +200,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/demos/2017KC2296/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2017KC2296/full/full/0/default",
                 "type": "Image",
                 "format": "img/jpeg",
                 "width": 6000,
                 "height": 8000,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/demos/2017KC2296",
+                  "id": "https://framemark.vam.ac.uk/collections/2017KC2296",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -222,7 +222,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "canvas 4"
+          "Version 4"
         ]
       },
       "summary": {
@@ -254,13 +254,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/demos/2017KC2297/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2017KC2297/full/full/0/default",
                 "type": "Image",
                 "format": "img/jpeg",
                 "width": 6000,
                 "height": 8000,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/demos/2017KC2297",
+                  "id": "https://framemark.vam.ac.uk/collections/2017KC2297",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -276,7 +276,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "canvas 5"
+          "Version 5"
         ]
       },
       "summary": {
@@ -308,13 +308,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/demos/2017KC2298/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2017KC2298/full/full/0/default",
                 "type": "Image",
                 "format": "img/jpeg",
                 "width": 6000,
                 "height": 8000,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/demos/2017KC2298",
+                  "id": "https://framemark.vam.ac.uk/collections/2017KC2298",
                   "type": "ImageService2",
                   "profile": "level1"
                 }
@@ -330,7 +330,7 @@
       "type": "Canvas",
       "label": {
         "en": [
-          "canvas 6"
+          "Version 6"
         ]
       },
       "summary": {
@@ -362,13 +362,13 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "@id": "https://framemark-int.vam.ac.uk/demos/2017KC2299/full/full/0/default",
+                "@id": "https://framemark.vam.ac.uk/collections/2017KC2299/full/full/0/default",
                 "type": "Image",
                 "format": "img/jpeg",
                 "width": 6000,
                 "height": 8000,
                 "service": {
-                  "id": "https://framemark-int.vam.ac.uk/demos/2017KC2299",
+                  "id": "https://framemark.vam.ac.uk/collections/2017KC2299",
                   "type": "ImageService2",
                   "profile": "level1"
                 }

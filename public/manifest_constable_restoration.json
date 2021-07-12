@@ -1,0 +1,199 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "The Haywain restoration"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Comment"
+        ]
+      },
+      "value": {
+        "@none": [
+          "LayerStack demo"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "en": [
+      "LayerStack demo"
+    ]
+  },
+  "thumbnail": [
+    {
+      "id": "#TODO",
+      "type": "Image",
+      "width": 200,
+      "height": 300,
+      "service": {
+        "id": "#TODO",
+        "type": "ImageService2",
+        "profile": "level1"
+      }
+    }
+  ],
+  "rights": "https://creativecommons.org/licenses/by/4.0/",
+  "homepage": {
+    "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json",
+    "type": "Text",
+    "label": {
+      "en": [
+        "LayerStack demo"
+      ]
+    },
+    "format": "text/html"
+  },
+  "items": [
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Infrared"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Infrared"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 48111,
+      "height": 38623,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/12",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/13",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://framemark.vam.ac.uk/collections/2010EB9761/full/full/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 48111,
+                "height": 38623,
+                "service": {
+                  "id": "https://framemark.vam.ac.uk/collections/2010EB9761", 
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Surface"
+        ]
+      },
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 48111,
+      "height": 38623,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/22",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/23",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://framemark.vam.ac.uk/collections/2010EG9859/full/full/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 48111,
+                "height": 38623,
+                "service": {
+                  "id": "https://framemark.vam.ac.uk/collections/2010EG9859", 
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/range/1",
+      "type": "Range",
+      "label": { "en": [ "Superimposed regions" ] },
+      "behavior": [
+        "superimpose-regions"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
+          "selector": {
+            "type": "ImageApiSelector",
+            "region": "pct:2.835,7.616,92.177,85.498",
+            "rotation" : "0.2"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
+          "selector": {
+            "type": "ImageApiSelector",
+            "region": "pct:3.465,6.175,91.657,84.985",
+            "rotation" : "0"
+          }
+        }  
+      ]
+    }
+  ]
+}

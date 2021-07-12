@@ -1,0 +1,202 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Christ's Charge to Peter"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Comment"
+        ]
+      },
+      "value": {
+        "@none": [
+          "LayerStack demo"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "en": [
+      "LayerStack demo"
+    ]
+  },
+  "thumbnail": [
+    {
+      "id": "#TODO",
+      "type": "Image",
+      "width": 200,
+      "height": 300,
+      "service": {
+        "id": "#TODO",
+        "type": "ImageService2",
+        "profile": "level1"
+      }
+    }
+  ],
+  "rights": "https://creativecommons.org/licenses/by/4.0/",
+  "homepage": {
+    "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json",
+    "type": "Text",
+    "label": {
+      "en": [
+        "LayerStack demo"
+      ]
+    },
+    "format": "text/html"
+  },
+  "items": [
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Cartoon"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 48111,
+      "height": 38623,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/12",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/13",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://framemark.vam.ac.uk/collections/2020MP2544/full/full/!0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 48111,
+                "height": 38623,
+                "service": {
+                  "id": "https://framemark.vam.ac.uk/collections/2020MP2544",
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Tapestry"
+        ]
+      },
+      "metadata": [
+        {"label": "Imaging technique", "value": "Visible light"}
+      ],
+      "summary": {
+        "en": [
+          ""
+        ]
+      },
+      "width": 3657,
+      "height": 4160,
+      "requiredStatement": {
+        "label": {
+          "en": [
+            ""
+          ]
+        },
+        "value": {
+          "en": [
+            ""
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/list/22",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/annotation/23",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "@id": "https://catalogo.museivaticani.va/service.php/IIIF/representation:198629:1/full/full/0/default.jpg", 
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 3657,
+                "height": 4160,
+                "service": {
+                  "id": "https://catalogo.museivaticani.va/service.php/IIIF/198629",
+                  "type": "ImageService2",
+                  "profile": "level1"
+                }
+              },
+              "target": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/range/1",
+      "type": "Range",
+      "label": { "en": [ "Superimposed regions" ] },
+      "behavior": [
+        "superimpose-regions"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
+          "selector": {
+            "type": "ImageApiSelector",
+            "region": "pct:0.174,17.98,99.431,64.419",
+            "rotation" : "90"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": "https://vanda.github.io/iiif-features/img/compariscope_manifest.json/canvas/1",
+          "selector": {
+            "type": "ImageApiSelector",
+            "region": "pct:16.903,0.173,65.995,99.807",
+            "rotation" : "!0"
+          }
+        }  
+      ]
+    }
+  ]
+}
