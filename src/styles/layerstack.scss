@@ -40,7 +40,7 @@
 
   &__viewer {
     cursor: pointer;
-    height: 500px;
+    height: 64vh;
 
     :fullscreen & {
       height: calc(100vh - 100px);
