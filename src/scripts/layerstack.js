@@ -1,6 +1,5 @@
 import '../styles/layerstack.scss';
 import OpenSeadragon from 'openseadragon';
-import 'element-closest-polyfill';
 import 'fullscreen-polyfill';
 import './manifesto';
 
