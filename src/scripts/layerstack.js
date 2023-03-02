@@ -96,12 +96,14 @@ const LayerStack = {
     el.fader.max = el.stackHeight;
     el.fader.value = el.fader.max;
     el.fader.color();
-    LayerStack.key(el, label);
+    if (!el.noKey) {
+      LayerStack.key(el, label);
+    }
   },
   fade: (el, x) => {
     el.fader.value = x;
     const bgLayer = Math.floor(x);
-    const opacity = (el.nofade) ? 0 : x - bgLayer;
+    const opacity = (el.noFade) ? 0 : x - bgLayer;
     for (let i = el.stackHeight; i > 0; i--) {
       if (i > bgLayer + 1 ) {
         el.osd.world.getItemAt(i-1).setOpacity(0);
@@ -236,8 +238,12 @@ const layerStacker = function(layerstackEl) {
         layerstackEl.osd.addTiledImage(osdArgs);
       });
 
-      if (layerstackEl.dataset.noFade) {
-        layerstackEl.nofade = true;
+      if (layerstackEl.dataset.noFade === 'true') {
+        layerstackEl.noFade = true;
+      }
+
+      if (layerstackEl.dataset.noKey === 'true') {
+        layerstackEl.noKey = true;
       }
     }).catch(e => console.error(e.name, e.message));
   }
