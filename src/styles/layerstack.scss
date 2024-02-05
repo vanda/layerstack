@@ -186,12 +186,12 @@
     padding: 35px 24px 24px;
   }
 
-  &__fader,
+  input[type="range"]#{&}__fader,
   &__key {
     width: 100%;
   }
 
-  &__fader {
+  input[type="range"]#{&}__fader {
     appearance: none;
     background: var(--grey2, #505354);
     color: var(--green, #50e3c2);
