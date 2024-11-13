@@ -8,7 +8,7 @@ Specific regions of interest are expected to be defined as a _Range_ of _Fragmen
 ### Installation
 
 ```
-npm ci
+npm install
 ```
 
 ### Start Dev Server
